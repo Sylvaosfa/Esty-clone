@@ -5,24 +5,36 @@ import { SearchVideos } from '@/utils/fetchData'
 import { useState } from 'react'
 
 const Searchbar = () => {
-  const [ count, setCount ] = useState(0);
-
-  function update() {
-    setCount(count+1)
+  const [ loading, setLoading ] = useState(false)
+  const [ result, setResult ] = useState([])
+  const [ ask, setAsk ] = useState("")
+  
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    setLoading(true)
+  
+  const data = await SearchVideos(`search/?query=${ask}`)
+    console.log(data)
+    setResult(data) 
+    setLoading(false)
   }
+  
   return (
     <div>
-     <form>
-     <input type="text" placeholder='search..' />
+     <form onSubmit={handleSearch}>
+     <input type="text" placeholder='search..' 
+     value={ask}
+     onChange={(e) => setAsk(e.target.value)}
+     />
      <button>
       search  
      </button>
      </form>
 
-     <h1>{count}</h1>
-     <button onClick={update}>
-        Update count
-     </button>
+  {
+  loading ? <p>Loading...</p>: null
+  }
+     
     </div>
   )
 }

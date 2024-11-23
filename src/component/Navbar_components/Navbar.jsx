@@ -1,15 +1,15 @@
-import React from 'react'
-import Youtubeimage from './Youtubeimage';
+import React from 'react';
 import { RxHamburgerMenu } from "react-icons/rx";
+import Youtubeimage from './Youtubeimage';
 import Searchbar from './Searchbar';
 
 const Navbar = () => {
   return (
-    <div className='flex gap-14'>
+    <div className='flex gap-14 nav'>
     <div className='flex items-center gap-6 ml-7'>
-            <RxHamburgerMenu/>
+        <RxHamburgerMenu/>
         <Youtubeimage/>
-        </div>
+      </div>
 
     <div>
       <Searchbar/>

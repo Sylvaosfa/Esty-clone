@@ -1,7 +1,7 @@
 const BASE_URL = 'https://youtube-v2.p.rapidapi.com'
 
-export const SearchVideos = (query) => {
-    const response = fetch( `${BASE_URL}/${query}`, {
+export const SearchVideos = async  (param) => {
+    const response = await fetch( `${BASE_URL}/${param}`, {
     method: "GET",
     headers: {
         'x-rapidapi-key': '894383e4b5msh89209cad94ed8ecp17b6d3jsne84eb37858a0',
@@ -9,6 +9,6 @@ export const SearchVideos = (query) => {
     }
     })
 
-    const result = response.json();
+    const result = await response.json();
     return result;
 }
