@@ -2,12 +2,17 @@
 
 import React from 'react'
 import { SearchVideos } from '@/utils/fetchData'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import Image from 'next/image'
+import { SearchContext } from '@/contexts/SearchContext'
 
 const Searchbar = () => {
+
+  const { result, setResult } = useContext(SearchContext);
+
   const [ loading, setLoading ] = useState(false)
-  const [ result, setResult ] = useState([])
+
+  //const [ result, setResult ] = useState([])
   const [ ask, setAsk ] = useState("")
   
   const handleSearch = async (e) => {
@@ -39,8 +44,8 @@ const Searchbar = () => {
       {
         result .map((a,b) =>
         (
-          <div key={b}>
-            <h1>
+          <div key={b}>  
+            <h1 className='text-red-500'>
             {a.title}
             </h1>
             <p>{a.video_length}
@@ -48,7 +53,7 @@ const Searchbar = () => {
             <p>{a.number_of_views}</p>
 
             <img src={a.thumbnails[0].url} 
-            nalt="image" />
+            alt="image" />
           </div>
         ))
       }
