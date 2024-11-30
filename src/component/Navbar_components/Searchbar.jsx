@@ -41,7 +41,7 @@ const Searchbar = () => {
   loading ? <p>Loading...</p>: null
   }
      
-      {
+      {/* {
         result .map((a,b) =>
         (
           <div key={b}>  
@@ -56,10 +56,10 @@ const Searchbar = () => {
             alt="image" />
           </div>
         ))
-      }
+      } */}
     
     </div>
   )
 }
-
+ 
 export default Searchbar

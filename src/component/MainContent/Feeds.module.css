@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+.container img{
+    height: 181px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.container h1{
+    font-size: medium;
+    font-weight: 600;
+}
+.container p{
+    font-size: small;
+    font-weight: 600;
+    color:rgb(112, 107, 107)
+}
