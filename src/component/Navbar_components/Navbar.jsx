@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { RxHamburgerMenu } from "react-icons/rx";
 import Youtubeimage from './Youtubeimage';
 import Searchbar from './Searchbar';

@@ -3,7 +3,7 @@
 import React from 'react'
 import { SearchVideos } from '@/utils/fetchData'
 import { useState, useContext } from 'react'
-import Image from 'next/image'
+
 import { SearchContext } from '@/contexts/SearchContext'
 
 const Searchbar = () => {
