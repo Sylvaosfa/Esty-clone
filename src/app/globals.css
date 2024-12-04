@@ -17,3 +17,8 @@ body{
   gap: 15px;
   margin-left: 28px;
 }
+.con{
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}

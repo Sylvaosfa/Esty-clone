@@ -19,19 +19,18 @@ const Feeds = () => {
       <div key={index} className={styles.content}>
      {
       playingVideo === eachItem.video_id ?
-      <iframe src={``} 
+      <iframe src={`https://www.youtube.com/embed/${eachItem.video_id}`} 
       frameborder="0">
       </iframe>
       :
       (
-        <div>
+        <div className={styles.Text}>
         <img src={eachItem.thumbnails[0].url} alt="image" onClick=
         {() => handlePlayVideo(eachItem.video_id)} />
         <h1>{eachItem.title}</h1>
         <p>{eachItem.description}</p>
         <p>{eachItem.video_length}</p>
-        <p>{eachItem.number_of_views}</p>
-        <p>{eachItem.published_time}</p>
+        <p>{eachItem.number_of_views}{eachItem.published_time}</p>
         </div>
       )
      }
