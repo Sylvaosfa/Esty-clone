@@ -9,7 +9,7 @@ const MiniSideBar = () => {
 <div className={styles.home}>
   <Image src='/IMG-20241202-WA0079.jpg' width={20} height={20} alt='image' />   
   <h1>Home</h1>
-  </div>
+  </div>   
 <div className={styles.home}>
   <Image src='/IMG-20241202-WA0081.jpg' width={20} height={20} alt='image' />
   <h1>Shorts</h1>

@@ -20,6 +20,9 @@ const Navbar = () => {
         <Youtubeimage/>
       </div>
 
+   <div className=''>
+
+   </div>
     <div>
       <Searchbar/>
     </div>
