@@ -18,15 +18,24 @@ const Navbar = () => {
     <div className='flex items-center gap-6 ml-7'>
         <RxHamburgerMenu onClick={handleChange}/>
         <Youtubeimage/>
-      </div>
+      </div>  
 
    <div className=''>
 
-   </div>
     <div>
       <Searchbar/>
     </div>
-
+    <div >
+    <Image src='/icons8-microphone-24.png' width={13} height={7} alt='image' /> 
+    </div>
+    <div >
+    <Image src='/icons8-youtube-50.png' width={13} height={7} alt='image' /> 
+    </div>
+    <div >
+    <Image src='/icons8-notification-24.png' width={13} height={7} alt='image' />
+    </div>
+  
+    </div>
     </div> 
  )
 }

@@ -13,6 +13,11 @@
     cursor: pointer;
     margin-top: 6px; 
 }
+.home:hover{
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+
 .home h1{
     margin-top: -10px;
 }

@@ -2,10 +2,10 @@
 
 import React from 'react'
 import { SearchVideos } from '@/utils/fetchData'
-import { useState, useContext } from 'react'
+import { useState, useContext} from 'react'
 
 import { SearchContext } from '@/contexts/SearchContext'
-
+import Image from 'next/image'
 const Searchbar = () => {
 
   const { result, setResult } = useContext(SearchContext);
@@ -26,14 +26,34 @@ const Searchbar = () => {
   }
   
   return (
-    <div>
+    <div
+       style={{
+          display: "flex",
+          alignItems: "center",
+          border: "1px solid #ccc",
+          borderRadius: "20px",
+          padding: "5px 10px",
+          width:  "600px",
+          marginLeft: "120px"
+       }}
+    >
      <form onSubmit={handleSearch}>
-     <input type="text" placeholder='search..' 
+     <input type="text" placeholder='search...' 
+    style={{
+      flex:1,
+      border:"none",
+      fontSize:"14px",
+      padding:"5px",
+      borderRadius:"20px",
+      backgroundColor:"transparent",
+      width:"500px"
+
+    }}
      value={ask}
      onChange={(e) => setAsk(e.target.value)}
      />
      <button>
-      search  
+        <Image src='/icons8-search-48.png' width={25} height={25} alt='image' />
      </button>
      </form>
  

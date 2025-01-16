@@ -1,7 +1,8 @@
 "use client"
 import { createContext, useState, useEffect } from "react";
 import { SearchVideos } from "@/utils/fetchData";
-
+import { trendingvideos } from "@/utils/fetchData";
+import  { getSubtitle } from "@/utils/fetchData";
 export const SearchContext = createContext(); //initializing a context called SearchContext
 
 export const SearchProvider = ({children}) => {
