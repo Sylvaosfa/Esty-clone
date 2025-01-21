@@ -52,7 +52,7 @@ const Searchbar = () => {
      value={ask}
      onChange={(e) => setAsk(e.target.value)}
      />
-     <button>
+     <button className='search'>
         <Image src='/icons8-search-48.png' width={25} height={25} alt='image' />
      </button>
      </form>
